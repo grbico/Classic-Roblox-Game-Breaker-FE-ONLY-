@@ -1,0 +1,143 @@
+game.Lighting.TimeOfDay = "00:00:00"
+game.Lighting.FogEnd=35.555
+game.Lighting.FogColor=Color3.new(0, 0, 0)
+s=Instance.new("Sound",workspace)
+s.SoundId="11387922"
+s.Volume=1
+s.Volume=0.6
+s.Looped=true
+s:Play()
+task.wait(7)
+
+
+while wait() do
+	s = Instance.new("Sound",workspace)
+	s.Name = "Rise"
+	s.SoundId = "http://www.roblox.com/asset/?id=13061809"
+	s.Volume = 2
+	s.Pitch = 0.25
+
+	s.Parent = game.Workspace
+
+	s:play()
+	hint = Instance.new('Hint', script) 
+	hint.Text = ""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""..string.char(math.random(32,126))..""
+	hint.Name = ""..string.char(math.random(32,126))
+
+	texture = "http://www.roblox.com/asset/?id=216712758" 
+
+	local A = game.Workspace:GetChildren()
+	local B = game.Workspace:GetChildren()
+	local C = game.Workspace:GetChildren()
+	local D = game.Workspace:GetChildren()
+	local E = game.Workspace:GetChildren()
+	local F = game.Workspace:GetChildren()
+	for i,v in pairs(A) do
+		if v:IsA("Part") then
+			local d =	Instance.new("Decal",v)
+			v.Decal.Face = "Top"
+			v.Decal.Texture = texture
+			v.Anchored=true
+			v.CFrame=v.CFrame*CFrame.Angles(math.random(-10,10)/1060,math.random(-10,10)/1060,math.random(-10,10)/1060)		
+		end
+	end
+
+	for i,v in pairs(B) do
+		if v:IsA("Part") then
+			local s = Instance.new("Decal",v)
+			s.Face = "Front"
+			s.Texture = texture
+			v.CFrame=v.CFrame*CFrame.Angles(math.random(-10,10)/1060,math.random(-10,10)/1060,math.random(-10,10)/1060)			
+		end
+	end
+
+	for i,v in pairs(C) do
+		if v:IsA("Part") then
+			local h = Instance.new("Decal",v)
+			h.Face = "Back"
+			h.Texture = texture
+			
+			v.CFrame=v.CFrame*CFrame.Angles(math.random(-10,10)/1060,math.random(-10,10)/1060,math.random(-10,10)/1060)					end
+	end
+
+	for i,v in pairs(D) do
+		if v:IsA("Part") then
+			local j = Instance.new("Decal",v)
+			j.Face = "Left"
+			j.Texture = texture
+			v.CFrame=v.CFrame*CFrame.Angles(math.random(-10,10)/1060,math.random(-10,10)/1060,math.random(-10,10)/1060)						
+		end
+	end
+
+	for i,v in pairs(E) do
+		if v:IsA("Part") then
+			local k = Instance.new("Decal",v)
+			k.Face = "Right"
+			k.Texture = texture
+			v.CFrame=v.CFrame*CFrame.Angles(math.random(-10,10)/1060,math.random(-10,10)/1060,math.random(-10,10)/1060)						
+		end
+	end
+
+	for i,v in pairs(F) do
+		if v:IsA("Part") then
+			local l = Instance.new("Decal",v)
+			l.Face = "Bottom"
+			l.Texture = texture
+			v.CFrame=v.CFrame*CFrame.Angles(math.random(-10,10)/1060,math.random(-10,10)/1060,math.random(-10,10)/1060)					
+		end
+	end
+
+
+	local function death()
+		local randomPlayer = game.Players:GetPlayers()
+		[math.random(1,#game.Players:GetPlayers())]
+		playerRoot=randomPlayer.Character.HumanoidRootPart --:WaitForChild("HumanoidRootPart")
+
+	end
+
+	death()
+	asset = 95401558 
+
+	root = game:GetService("InsertService"):LoadAsset(asset)
+
+	root.Name = "Shade" .. asset
+root.Parent=game.Workspace
+force=Instance.new("BodyForce")
+force.Parent=root.Shade.Torso	
+force.Force=Vector3.new(0, 12544, 0)	
+	mass=root.Shade.Torso:GetMass() force.Force=Vector3.new(0,mass*196,0)
+	root.Shade.Humanoid.MaxHealth=999999999999999999999956987658786548754887349784397984378
+	root.Shade.Humanoid.Health=999999999999999999999956987658786548754887349784397984378
+	root.Shade.Torso.CFrame=CFrame.new(playerRoot.Position + playerRoot.CFrame.lookVector * 20)
+root.Shade.Torso.BrickColor=BrickColor.random()
+	root.Shade.Head.BrickColor=BrickColor.random()	
+	root.Shade["Right Arm"].BrickColor=BrickColor.random()
+	root.Shade["Left Arm"].BrickColor=BrickColor.random()
+	root.Shade["Right Leg"].BrickColor=BrickColor.random()
+	root.Shade["Left Leg"].BrickColor=BrickColor.random()
+	root.Shade.Torso:MakeJoints()
+	root.Shade.Torso.Transparency=0
+	root.Shade.Head.Transparency=0	
+	root.Shade["Right Arm"].Transparency=0
+	root.Shade["Left Arm"].Transparency=0
+	root.Shade["Right Leg"].Transparency=0
+	root.Shade["Left Leg"].Transparency=0
+	root.Shade.Name=""..string.char(math.random(32,126))
+	
+	local s = Instance.new("Sound")
+
+s.Name = "Sound"
+	s.SoundId = "http://www.roblox.com/asset/?id=28105371"
+s.Volume = 5
+	s.Pitch = 0.05
+s.Looped = true
+s.archivable = false
+
+s.Parent = game.Workspace
+hell=Instance.new("ColorCorrectionEffect",game.Lighting)
+hell.TintColor=Color3.new(1, 0.960784, 0.913725)
+s:play()
+--	if error then
+--		break
+--	end	
+end
